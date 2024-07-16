@@ -1,0 +1,79 @@
+body{
+    display: grid;
+    grid-template: "nav nav" 3.5rem "aside main"  auto / 1fr 1fr;
+    margin: 1rem;
+}
+
+nav{
+   grid-area: nav;
+   display: flex;
+   place-content: center space-between;
+   margin-bottom: 1rem;
+}
+
+nav .menu{
+    width: 8.75rem;
+    height: 2rem;
+}
+
+nav .search{
+    width: 25.25rem;
+    height: 2.5rem;
+}
+
+nav .login{
+    width: 8.12rem;
+    height: 2.12rem;
+}
+
+aside{
+    list-style: none;
+    grid-area: aside;
+}
+aside li{
+    display: grid;
+    row-gap: 1rem;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    place-content: space-evenly;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+main .topic{ 
+    display: grid;
+    grid-template: "img img" auto "avatar text1" 1fr "avatar text2" auto / 1fr 3fr;
+    gap: 0.2rem;
+}
+
+.topic img{
+    width: 15.62rem;
+    height: 8.77rem;
+    grid-area: img;
+    border-radius: 0.25rem;
+}
+
+.topic .dio{
+    width: 2.62rem;
+    height: 2.62rem;
+    grid-area: avatar;
+}
+.topic .text{
+   display:flex;
+   flex-direction: column;
+   place-content: space-between;
+}
+
+.topic h6{
+    grid-area: text1;
+
+}
+
+.topic span{
+    grid-area: text2;
+    height: 2.31rem;
+}
